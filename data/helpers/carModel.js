@@ -5,11 +5,18 @@ module.exports = {
     insert,
 };
 
-function get() {
-    return db("cars");
+function get(id) {
+    let query = db("cars as c");
+    if (id) {
+        return db('cars')
+        .where('cars.id' === id);
+    } else {
+        return db('cars');
+    }
 }
 
 function insert(car) {
-    return db("cars")
+    return db('cars')
     .insert(car)
 }
+

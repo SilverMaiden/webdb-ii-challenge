@@ -5,20 +5,23 @@ exports.seed = function(knex) {
     .then(function () {
       // Inserts seed entries
       return knex('cars').insert([
-        {vehicleIdNumber: "WBAVD33516KV29664",
+        {   id: 1,
+            VIN: "WBAVD33516KV29664",
             make: "something",
             model: "something",
-            mileage: "something"
+            mileage: 78978978.7789797
       },
-       {vehicleIdNumber: "1FMYU02Z96KB97004",
+       {    id: 2,
+            VIN: "1FMYU02Z96KB97004",
             make: "something",
             model: "something",
-            mileage: "something"
+            mileage: 45664564.564654
       },
-       {vehicleIdNumber: "KMHDH4AE1DU602749",
+       {    id: 3,
+            VIN: "KMHDH4AE1DU602749",
             make: "something",
             model: "something",
-            mileage: "something"
+            mileage: 12313213.1231312
       }
       ]);
     });
